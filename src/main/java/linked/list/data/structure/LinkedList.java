@@ -75,6 +75,34 @@ public class LinkedList<T extends Comparable<T>> implements List<T>{
 	public int size() {
 		// TODO Auto-generated method stub
 		return size;
+	}
+
+	@Override
+	public Node<T> getMiddleNode() {
+		
+		Node<T> slow = head;
+		Node<T> fast = head;
+		
+		while(fast.getNext() != null && fast.getNext().getNext() != null) {
+			slow = slow.getNext();
+			fast = fast.getNext().getNext();
+		}
+		
+		return slow;
 	}	
 	
+	@Override
+	public void resvers() {
+		
+		Node<T> previous = null;
+		Node<T> current = head;
+			
+		while(current != null) {	
+			Node<T> nextNode = current.getNext();
+			current.setNext(previous);	
+			previous = current;
+			current = nextNode;
+		}
+		head = previous;		
+	}	
 }

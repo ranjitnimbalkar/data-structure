@@ -24,9 +24,12 @@ public class TestList {
 		myLinedList.travers();
 		System.out.println(myLinedList.size());
 		
-		myLinedList.remove(new Person(30, "Ashvini"));
+//		myLinedList.remove(new Person(30, "Ashvini"));
+//		myLinedList.travers();
+//		System.out.println(myLinedList.size());
+//		System.out.println(myLinedList.getMiddleNode());
+		myLinedList.resvers();
 		myLinedList.travers();
-		System.out.println(myLinedList.size());
 	}
 
 }
